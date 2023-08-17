@@ -11,11 +11,11 @@ import {
 } from "../utils/helper";
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   const [sticky, setSticky] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [sidebar, setSidebar] = useState(false);
-
-  const { pathname } = useLocation();
 
   const makeSticky = () => {
     const stickyClass = window.scrollY >= 80 ? "stickyTop" : "";
@@ -25,9 +25,7 @@ const Navbar = () => {
   const openSidebar = () => setSidebar(true);
   const closeSidebar = () => setSidebar(false);
 
-  useEffect(() => {
-    setIsOpen(true);
-  }, [pathname]);
+  useEffect(() => setIsOpen(true), [pathname]);
 
   useEffect(() => {
     window.addEventListener("scroll", makeSticky);
@@ -144,22 +142,22 @@ const Navbar = () => {
 
           <ul className="sidebar-nav">
             <li className="nav-item">
-              <Link to="/" className="nav-link" onClick={isOpen && closeSidebar}>
+              <Link to="/" className="nav-link" onClick={isOpen ? closeSidebar : null}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="about" className="nav-link" onClick={isOpen && closeSidebar}>
+              <Link to="about" className="nav-link" onClick={isOpen ? closeSidebar : null}>
                 About Us
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="blog-page" className="nav-link" onClick={isOpen && closeSidebar}>
+              <Link to="blog-page" className="nav-link" onClick={isOpen ? closeSidebar : null}>
                 Blog
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="product" className="nav-link" onClick={isOpen && closeSidebar}>
+              <Link to="product" className="nav-link" onClick={() => {}}>
                 Products
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 320 512">
                   <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
@@ -167,33 +165,33 @@ const Navbar = () => {
               </Link>
               <ul className="dropdown-menu">
                 <li className="dropdown-item">
-                  <Link to="#!" className="dropdown-link">
+                  <Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
                     Boots
                   </Link>
                 </li>
                 <li className="dropdown-item">
-                  <Link to="#!" className="dropdown-link">
+                  <Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
                     Bags
                   </Link>
                 </li>
                 <li className="dropdown-item">
-                  <Link to="#!" className="dropdown-link">
+                  <Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
                     Dresses
                   </Link>
                 </li>
                 <li className="dropdown-item">
-                  <Link to="#!" className="dropdown-link">
+                  <Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
                     Tunic
                   </Link>
                 </li>
                 <li className="dropdown-item">
-                  <Link to="#!" className="dropdown-link">
+                  <Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
                     T-Shirts
                   </Link>
                 </li>
               </ul>
             </li>
-            <li className="nav-item" onClick={isOpen && closeSidebar}>
+            <li className="nav-item" onClick={isOpen ? closeSidebar : null}>
               <Link to="contact" className="nav-link">
                 Contact Us
               </Link>

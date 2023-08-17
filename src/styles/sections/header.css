@@ -226,8 +226,16 @@ nav {
   align-items: center;
   justify-content: space-between;
 
+  svg {
+    transition: fill 0.3s ease-in-out;
+  }
+
   .login-link {
     cursor: pointer;
+
+    &:hover svg {
+      fill: var(--color-primary);
+    }
   }
 
   .login-link:not(:first-child) {
