@@ -1,0 +1,45 @@
+#blog {
+  .swiper-slide {
+    position: relative;
+  }
+}
+
+.blog-content {
+  padding: 2rem 1rem;
+
+  h3 {
+    font-size: var(--fs-h4);
+  }
+
+  p {
+    line-height: var(--lh-body);
+    font-size: var(--fs-topbar);
+  }
+}
+
+#brands {
+  border-top: 0.1rem solid hsla(0, 2%, 12%, 0.075);
+}
+
+.brands-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover img {
+    transform: translateY(-0.4rem);
+  }
+}
+
+/* // ----------------------------------- MEDIA QUERIES -------------------------------------- */
+
+@media screen and (max-width: 991px) {
+  .brands-wrapper {
+    gap: 3.6rem;
+    flex-wrap: wrap;
+  }
+}

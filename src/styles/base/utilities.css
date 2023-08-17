@@ -1,0 +1,63 @@
+@import "./variables.css";
+
+.container {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  max-width: var(--width-container);
+}
+
+section {
+  padding: var(--section-padding 0);
+}
+
+.w-100 {
+  max-width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.d-none {
+  display: none;
+}
+
+.badge {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  font-size: var(--fs-topbar);
+  padding: 1.2rem 1.5rem 1.4rem;
+}
+
+.badge-date {
+  color: var(--color-Dark-800);
+  background-color: var(--color-light-100);
+}
+
+.badge-dark {
+  color: var(--color-light-100);
+  background-color: var(--color-Dark-800);
+}
+
+.badge-red {
+  color: var(--color-light-100);
+  background-color: var(--color-primary);
+}
+
+/* // ----------------------------------- MEDIA QUERIES ------------------------------------- */
+
+@media screen and (max-width: 800px) {
+  section {
+    padding: 5rem 0;
+  }
+}

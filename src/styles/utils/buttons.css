@@ -1,0 +1,129 @@
+.btn {
+  font-weight: 600;
+  font-size: var(--fs-btn);
+  display: inline-block;
+  padding: 1.6rem 3.6rem 1.8rem;
+}
+
+.btn-white {
+  color: var(--color-dark-800);
+  background-color: white;
+
+  svg {
+    transform: translate(0.2rem, 0.3rem);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: translate(0.6rem, 0.3rem);
+    }
+  }
+}
+
+.btn-dark {
+  margin-top: 5rem;
+  color: var(--color-light-100);
+  background-color: var(--color-Dark-800);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(0.2rem);
+  }
+}
+
+.btn-blank {
+  color: var(--color-light-100);
+  background-color: transparent;
+
+  svg {
+    fill: var(--color-light-100);
+    transform: translate(0.2rem, 0.35rem);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: translate(0.6rem, 0.35rem);
+    }
+  }
+}
+
+.btn-darkBlank {
+  font-weight: 600;
+  font-size: var(--fs-btn);
+  color: var(--color-dark-800);
+  background-color: transparent;
+
+  svg {
+    fill: var(--color-dark-800);
+    transform: translate(0.2rem, 0.35rem);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: translate(0.6rem, 0.35rem);
+    }
+  }
+}
+
+button {
+  width: 100%;
+  border: none;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.btn-submit {
+  color: white;
+  border-radius: 0;
+  padding: 2rem 3rem;
+  background-color: black;
+}
+
+.btn-outline {
+  color: black;
+  padding: 2rem 3rem;
+  border: 0.1rem solid black;
+  background-color: transparent;
+}
+
+.btn-facebook {
+  color: white;
+  margin-top: 3rem;
+  padding: 1.6rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(214, 89%, 52%);
+  transition: background-color 0.3s ease-in-out;
+
+  svg {
+    fill: white;
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    background-color: hsl(214, 89%, 42%);
+  }
+}
+
+.btn-google {
+  color: white;
+  padding: 1.6rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(5, 69%, 56%);
+  transition: background-color 0.3s ease-in-out;
+
+  svg {
+    fill: white;
+    margin-right: 1rem;
+  }
+
+  &:hover {
+    background-color: hsl(5, 69%, 46%);
+  }
+}

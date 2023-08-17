@@ -1,0 +1,13 @@
+@import "./base/globals.css";
+@import "./base/utilities.css";
+
+@import "./utils/buttons.css";
+
+@import "./sections/header.css";
+@import "./sections/banner.css";
+@import "./sections/best-picks.css";
+@import "./sections/features.css";
+@import "./sections/top-sellers.css";
+@import "./sections/collection.css";
+@import "./sections/blog.css";
+@import "./sections/footer.css";
