@@ -24,7 +24,7 @@
 .btn-dark {
   margin-top: 5rem;
   color: var(--color-light-100);
-  background-color: var(--color-Dark-800);
+  background-color: var(--color-dark-800);
   transition: transform 0.3s ease-in-out;
 
   &:hover {

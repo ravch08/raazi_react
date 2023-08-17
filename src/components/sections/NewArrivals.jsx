@@ -45,6 +45,20 @@ const NewArrivals = () => {
           slidesPerView={4}
           grabCursor={true}
           centeredSlides={false}
+          breakpoints={{
+            350: {
+              slidesPerView: 1,
+            },
+            800: {
+              slidesPerView: 2,
+            },
+            991: {
+              slidesPerView: 3,
+            },
+            1400: {
+              slidesPerView: 4,
+            },
+          }}
         >
           {newArrivalItemsList}
         </Swiper>

@@ -38,6 +38,17 @@ const Blog = () => {
           slidesPerView={3}
           grabCursor={true}
           centeredSlides={false}
+          breakpoints={{
+            350: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1200: {
+              slidesPerView: 3,
+            },
+          }}
         >
           {blogItemsList}
         </Swiper>

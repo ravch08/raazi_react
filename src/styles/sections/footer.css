@@ -16,6 +16,7 @@ footer {
 
   .ftr-email {
     text-align: center;
+    position: relative;
     color: var(--color-light-100);
   }
 
@@ -35,11 +36,14 @@ footer {
     &::placeholder {
       color: var(--color-light-100);
     }
+  }
 
-    &:focus-visible {
-      border: none;
-      outline: none;
-    }
+  .form-error {
+    bottom: -30%;
+    left: 31%;
+    color: red;
+    position: absolute;
+    transform: translateX(-50%);
   }
 
   input[type="submit"] {

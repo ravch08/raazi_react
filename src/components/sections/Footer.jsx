@@ -1,18 +1,50 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { LogoLight, Payment, ScrollToTop, SocialIcons } from "../utils/helper";
 
 const Footer = () => {
+  const {
+    register,
+    reset,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
+
+  const handleFormSubmit = (data) => {
+    console.log("Form Submitted: ", data);
+    reset();
+  };
+
   return (
     <footer>
       <div className="container">
         <div className="ftr-email">
           <h2>Want style Ideas and Treats?</h2>
-          <form className="email">
-            <input type="email" name="email" placeholder="Enter Email*" required />
+
+          <form className="email" onSubmit={handleSubmit(handleFormSubmit)} noValidate>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter Email*"
+              {...register("email", {
+                required: {
+                  value: true,
+                  message: "Email is Required!",
+                },
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  message: "Invalid Email Format",
+                },
+              })}
+            />
             <input type="submit" className="btn-subscribe" value="Subscribe" />
           </form>
+
+          <p className="form-error">{errors.email?.message}</p>
         </div>
+
         <div className="footer-wrapper">
           <div className="ftr-cont">
             <Link to="/" className="ftr-logo">
