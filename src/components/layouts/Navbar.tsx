@@ -19,7 +19,7 @@ const Navbar = () => {
 	const [sidebar, setSidebar] = useState(false);
 
 	const makeSticky = () => {
-		const stickyClass = window.scrollY >= 80 ? "stickyTop" : "";
+		const stickyClass = window.scrollY >= 150 ? "stickyTop" : "";
 		setSticky(stickyClass);
 	};
 
@@ -141,17 +141,21 @@ const Navbar = () => {
 
 					<ul className="sidebar-nav">
 						<li className="nav-item">
-							<Link to="/" className="nav-link" onClick={isOpen ? closeSidebar : null}>
+							<Link to="/" className="nav-link" onClick={() => (isOpen ? closeSidebar : null)}>
 								Home
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link to="about" className="nav-link" onClick={isOpen ? closeSidebar : null}>
+							<Link to="about" className="nav-link" onClick={() => (isOpen ? closeSidebar : null)}>
 								About Us
 							</Link>
 						</li>
 						<li className="nav-item">
-							<Link to="blog-page" className="nav-link" onClick={isOpen ? closeSidebar : null}>
+							<Link
+								to="blog-page"
+								className="nav-link"
+								onClick={() => (isOpen ? closeSidebar : null)}
+							>
 								Blog
 							</Link>
 						</li>
@@ -164,33 +168,53 @@ const Navbar = () => {
 							</Link>
 							<ul className="dropdown-menu">
 								<li className="dropdown-item">
-									<Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
+									<Link
+										to="#!"
+										className="dropdown-link"
+										onClick={() => (isOpen ? closeSidebar : null)}
+									>
 										Boots
 									</Link>
 								</li>
 								<li className="dropdown-item">
-									<Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
+									<Link
+										to="#!"
+										className="dropdown-link"
+										onClick={() => (isOpen ? closeSidebar : null)}
+									>
 										Bags
 									</Link>
 								</li>
 								<li className="dropdown-item">
-									<Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
+									<Link
+										to="#!"
+										className="dropdown-link"
+										onClick={() => (isOpen ? closeSidebar : null)}
+									>
 										Dresses
 									</Link>
 								</li>
 								<li className="dropdown-item">
-									<Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
+									<Link
+										to="#!"
+										className="dropdown-link"
+										onClick={() => (isOpen ? closeSidebar : null)}
+									>
 										Tunic
 									</Link>
 								</li>
 								<li className="dropdown-item">
-									<Link to="#!" className="dropdown-link" onClick={isOpen ? closeSidebar : null}>
+									<Link
+										to="#!"
+										className="dropdown-link"
+										onClick={() => (isOpen ? closeSidebar : null)}
+									>
 										T-Shirts
 									</Link>
 								</li>
 							</ul>
 						</li>
-						<li className="nav-item" onClick={isOpen ? closeSidebar : null}>
+						<li className="nav-item" onClick={() => (isOpen ? closeSidebar : null)}>
 							<Link to="contact" className="nav-link">
 								Contact Us
 							</Link>
